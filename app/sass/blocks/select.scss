@@ -38,7 +38,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(39, 39, 51, 0.9);
+    background: rgba(39, 39, 51, 1);
     border: 1px solid $basic-grey;
     box-sizing: border-box;
     border-radius: 3px;
@@ -53,9 +53,6 @@
     color: $basic-white;
     scrollbar-width: thin;
     overscroll-behavior: contain;
-    @include touch {
-      background: rgba(39, 39, 51, 1);
-    }
     @include mobile {
       outline: 1px solid $basic-grey;
     }

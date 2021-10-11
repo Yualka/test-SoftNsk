@@ -107,7 +107,7 @@
         </ul>
         <form class="order__form form js-form"  action="" method="post">
             <div class="form__row">
-                <div class="form__group select js-form-group">
+                <div class="form__group select">
                     <input class="select__input" type="hidden" name="select">
                     <div class="form__control select__head">Выберите тип системы</div>
                     <ul class="select__list" style="display: none;">
@@ -124,22 +124,96 @@
                     </ul>
                 </div>
                 <div class="form__group js-form-group">
-                    <input class="form__control js-input" id="form-mail" type="email" name="e-mail" value="">
-                    <span class="form__error">Это поле должно содержать e-mail в формате example@site.com</span>
+                    <input class="form__control js-input form__control--email-error" id="form-mail" type="email" name="e-mail" autocomplete="off" value="">
                     <label class="form__label js-label" for="form-mail">Ваш e-mail</label>
-
+                    <span class="form__error">Это поле должно содержать e-mail в формате example@site.com</span>
                 </div>
                 <div class="form__group js-form-group">
-                    <input class="form__control js-input" id="form-name" type="text" name="form-nm" value="">
+                    <input class="form__control js-input" id="form-name" type="text" name="form-nm" autocomplete="off" value="">
                     <label class="form__label js-label" for="form-name">Ваше имя</label>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__group slider">
+                    <div class="slider__control">
+                        <span>Sed ut perspiciatis, unde omnis iste natus</span>
+                        <p><span class="slider__value"></span><span> %</span></p>
+                    </div>
+                    <input type="range" min="1" max="100" value="75" class="slider__input">
+                </div>
+                <div class="form__group file">
+                    <div class="button-file" id="file-add">
+                        <div class="button-file__add">
+                            <input type="file" id="file-input" class="file__input" name="f[file-input][]"
+                                   multiple="multiple" accept="image/* ,video/*, audio/*, application/msword, application/pdf,
+                                    application/vnd.ms-excel, application/rtf,application/vnd.ms-powerpoint,
+                                    application/vnd.openxmlformats-officedocument.presentationml.slideshow,
+                                    application/vnd.openxmlformats-officedocument.presentationml.presentation,
+                                     .xlsx, .docx, .pcx, .pps, .rtf, .wmf">
+                            <label id="addFile"  for="file-input" class="file__label">
+                                <img class="" src="images/dest/fileAdd.svg" alt="">
+                                Прикрепить файл
+                            </label>
+                        </div>
+                        <div id="error-message" class="button-file__error"></div>
+
+                        <div class="file__table js-file__table">
+                            <a class="file__table-toggle js-text_toggle" href="#">
+                                <span>Показать загруженные файлы</span>
+                                <img src="images/dest/arrow-white.svg" alt="" style="">
+                            </a>
+                            <div class="file__table-block js-table_desc">
+                                <div class="file__remainder remainder">
+                                    <div id="totalsize">Общий размер загруженных файлов <span>0.00</span> MB</div>
+                                    <div id="remainsize">Осталось: <span>10.00</span> MB</div>
+                                    <span>Можно загрузить не более 10 файлов.</span>
+                                </div>
+                                <table class="file__table-files" cellspacing="0" cellpadding="0" width="auto">
+                                    <tbody class="filedetails" id="filedetails"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__row btn">
+                <div class="form__group form-btn">
+                    <button type="submit">Отправить</button>
                 </div>
             </div>
         </form>
     </div>
 </section>
-
 <footer class="footer">
-
+    <div class="footer__column page__container">
+        <div class="footer__column-left column">
+            <span>© 2018 «LOREMIPSUM.NET» Все права защищены.</span>
+        </div>
+        <div class="footer-column footer__column-center column">
+            <div class="footer-column__item">
+                <img src="images/dest/icon-qiwi.svg" alt="">
+                <span>Qiwi wallet</span>
+            </div>
+            <div class="footer-column__item">
+                <img src="images/dest/icon-yandex.svg" alt="">
+                <span>Yandex Money</span>
+            </div>
+            <div class="footer-column__item">
+                <img src="images/dest/icon-web.svg" alt="">
+                <span>Web Money</span>
+            </div>
+        </div>
+        <div class="footer-column footer__column-right column">
+            <a class="footer-column__item" href="mailto:info@ipsum228.com">
+                <img src="images/dest/icon-email.svg" alt="">
+                <span>info@ipsum228.com</span>
+            </a>
+            <a class="footer-column__item" href="https://vk.com" target="_blank" rel="noopener">
+                <img src="images/dest/icon-vk.svg" alt="">
+                <span>Мы вконтакте</span>
+            </a>
+        </div>
+    </div>
 </footer>
 
 <script src="js/app.min.js"></script>
