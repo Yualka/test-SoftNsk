@@ -1,0 +1,118 @@
+.order {
+  background: url('../../images/dest/fond.svg') center / cover no-repeat  #272733;
+  color: $basic-white;
+  padding-top: 100px;
+  text-align: center;
+  padding-bottom: 150px;
+  @include touch {
+    padding-bottom: 90px;
+  }
+  @include mobile {
+    padding-bottom: 50px;
+  }
+  &__header {
+    margin-bottom: 30px;
+    .title {
+      text-transform: uppercase;
+      font-weight: 700;
+     @extend %font-size36-43;
+      span {
+        color: $basic-blue;
+      }
+    }
+  }
+  .page__container {
+    margin-top: 0;
+  }
+  &__body {
+    span {
+      font-weight: normal;
+      @extend %font-size18-22;
+      color: $special-gray;
+    }
+    .order__item span {
+      color: $basic-white;
+      font-weight: normal;
+      @extend %font-size16-19;
+      @include mobile {
+        width: 188px;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 209px;
+    padding: 5px;
+    margin-bottom: 10px;
+    @include mobile {
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+      @include mobile {
+        margin-right: 0;
+      }
+    }
+    &:last-child {
+      .order__img::after {
+        content: "";
+      }
+    }
+    &:first-child {
+      .order__img::before {
+        content: "";
+      }
+    }
+  }
+  &__img {
+    @extend %horizontal-flexCent;
+    background: #3E9CDC;
+    border: 5px solid #286690;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    position: relative;
+    @include mobile {
+      margin-right: 10px;
+    }
+    &::after,
+    &:before {
+      position: absolute;
+      top: 0;
+      letter-spacing: 12px;
+      font-size: 50px;
+      color: #c4c4c4;
+    }
+    &:after {
+      content: "...";
+      right: -86px;
+      @include mobile {
+        content: "";
+      }
+    }
+    &:before {
+      content: "..";
+      left: -55px;
+      @include mobile {
+        content: "";
+      }
+    }
+  }
+}

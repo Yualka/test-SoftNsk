@@ -1,0 +1,27 @@
+/* Global */
+@import 'utilities/all';
+@import 'base/all';
+@import 'components/_all';
+
+/* Blocks */
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/page';
+@import 'blocks/hero';
+@import 'blocks/list';
+@import 'blocks/button';
+@import 'blocks/order';
+@import 'blocks/form';
+@import 'blocks/select';
+@import 'blocks/slider';
+@import 'blocks/button-file';
+@import 'blocks/footer';
+
+
+/* Inheritance */
+@import 'inheritance/inheritance';
+
+/* font-awesome */
+@import 'font-awesome/font-awesome';
+
+

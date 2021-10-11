@@ -1,0 +1,129 @@
+.menu {
+  &__list {
+    display: flex;
+    &--open {
+      height: 100%;
+      box-sizing: border-box;
+
+      .menu__item {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 28px;
+
+        @include tablet-only {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+
+      @include touch {
+        flex-direction: column;
+        overflow: auto;
+        background: rgba(16, 16, 29, 0.95);
+        padding-top: 135px;
+        padding-right: 32px;
+        padding-left: 32px;
+        font-size: 20px;
+      }
+    }
+  }
+  &__item {
+    text-transform: uppercase;
+    @extend %font-size13-16;
+    font-weight: 600;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    &.menu__item--active a {
+        color: $basic-blue;
+    }
+
+    a {
+      color: $basic-white;
+      &:hover,
+      &:focus {
+       color: $basic-blue;
+      }
+    }
+  }
+  &__button {
+    display: none;
+    &.menu__button--open {
+      display: none;
+    }
+    @include touch {
+      z-index: 21;
+      display: block;
+      margin: 0 0 0 auto;
+      padding: 26px 0 28px;
+      border: none;
+      background-color: transparent;
+      align-self: flex-end;
+      color: $basic-white;
+    }
+  }
+}
+
+/* Icon */
+
+@include touch {
+
+  .menu__icon {
+    display: block;
+    stroke: $basic-black;
+  }
+
+  .menu__icon-menu,
+  .menu__button--open .menu__icon-cross {
+    display: block;
+  }
+
+  .menu__icon-cross,
+  .menu__button--open .menu__icon-menu {
+    display: none;
+  }
+}
+
+.menu-modal__background {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.menu-modal__container {
+  position: relative;
+  overflow-y: auto;
+
+  @include touch {
+    margin-left: auto;
+    width: 436px;
+  }
+  @include mobile {
+    width: 60%;
+  }
+}
+
+.menu__list--open .menu__item:hover .menu__link,
+.menu__list--open .menu__item--active .menu__link {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    content: "";
+    background: $basic-blue;
+
+    @include touch {
+      bottom: -10px;
+    }
+
+    @include mobile {
+      height: 2px;
+    }
+
+    @include tablet {
+      height: 4px;
+    }
+  }
+}

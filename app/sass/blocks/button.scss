@@ -1,0 +1,45 @@
+.button {
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 183px;
+  height: 43px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @include mobile {
+    margin-bottom: 15px;
+  }
+
+  &:first-child {
+    margin-right: 30px;
+  }
+
+  &__order {
+    background: $basic-blue;
+    border: 1px solid $basic-white;
+    color: $basic-white;
+    &:hover {
+      background: $basic-white;
+      border: 2px solid $basic-blue;
+      color: $basic-blue;
+    }
+  }
+
+  &__details {
+    background: $basic-white;
+    border: 1px solid #6F6D7B;
+    color: #2A2B30;
+    &:hover {
+      background: $basic-blue;
+      border: 2px solid #6F6D7B;
+      color: $basic-black;
+    }
+  }
+
+}
+

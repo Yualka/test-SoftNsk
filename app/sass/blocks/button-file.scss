@@ -1,0 +1,117 @@
+.button-file {
+  position: relative;
+  z-index: 10;
+
+  &__add {
+    display: flex;
+    align-items: flex-start;
+    margin-top: auto;
+  }
+  span {
+    display: inline-block;
+    margin-bottom: 7px;
+  }
+}
+
+.form__group.file {
+  margin-right: 0;
+}
+
+.file {
+  &__table {
+    display: none;
+    text-align: left;
+    margin-top: 10px;
+    .file__table-toggle {
+      img {
+        margin-left: 5px;
+      }
+      span {
+        @extend %font-size15-18;
+      }
+    }
+    .file__table-block span {
+      @extend %font-size13-16;
+      color: $basic-blue;
+    }
+  }
+  &__table--show {
+    display: block;
+    .file__table-toggle span {
+      border-bottom: 1px solid $special-gray;
+    }
+  }
+  &__table-block {
+    display: none;
+    @extend %font-size15-18;
+    color: $special-gray;
+  }
+  &__input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    position: absolute;
+    z-index: -10;
+  }
+  &__label {
+    @extend %horizontal-flexCent;
+    background: $basic-white;
+    border: 2px solid $basic-blue;
+    box-sizing: border-box;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #272733;
+    font-style: normal;
+    font-weight: 600;
+    padding: 12px 10px;
+    @extend %font-size15-18;
+    width: 100%;
+    img {
+      margin-right: 10px;
+    }
+    &:hover {
+      cursor: pointer;
+      color: $basic-blue;
+    }
+    &__table-toggle {
+      img {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__table-files {
+    strong {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: $basic-white;
+
+    }
+  }
+  .filedetails {
+    &__add {
+      width: 100%;
+      td {
+        padding-bottom: 5px;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+#filedetails .delete {
+  border-bottom: 1px solid $basic-white;
+  padding-bottom: 0;
+  margin-left: 10px;
+  color: $basic-white;
+}
+
+.file__table-files #filedetails .delete:hover {
+  border-bottom: 1px solid $basic-blue;
+  color: $basic-blue;
+}
+
+#error-message span {
+  color: #a3162a;
+  @extend %font-size15-18;
+}

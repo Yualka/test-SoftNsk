@@ -1,0 +1,73 @@
+.slider {
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    @extend %font-size18-22;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 15px;
+  }
+  &__input {
+    -webkit-appearance: none;
+    height: 6px;
+    width: 100%;
+    outline: none;
+    padding: 0;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #FFFFFF;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.form__group.slider {
+  width: 65.8%;
+  @include touch {
+    width: 47.8%;
+
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.slider .slider__control span {
+  @include tablet-only  {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+/* стили бегунка */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-sizing: content-box;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #42A9ED;
+  border: 3px solid #286690;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #42A9ED;
+  border: 3px solid #286690;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #42A9ED;
+  border: 3px solid #286690;
+  cursor: pointer;
+}

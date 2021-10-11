@@ -1,0 +1,31 @@
+.u-hidden {
+  display: none !important;
+}
+
+.u-touch-hidden {
+  @include touch {
+    display: none !important;
+  }
+}
+
+.u-mobile-hidden {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.u-tablet-only-hidden {
+  @include tablet-only {
+    display: none !important;
+  }
+}
+
+.u-desktop-hidden {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.js-active {
+  display: block!important;
+}
