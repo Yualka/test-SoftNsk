@@ -195,14 +195,14 @@ $(document).ready(function(){
 });
 
 /*Обновить страницу при изменении размера*/
-$(window).bind('resize', function(e)
+/*$(window).bind('resize', function(e)
 {
     if (window.RT) clearTimeout(window.RT);
     window.RT = setTimeout(function()
     {
         this.location.reload(false);
     }, 100);
-});
+});*/
 
 var modalCloseEvent;
 if ( typeof (Event) === 'function' ) {
@@ -252,6 +252,7 @@ function updateMenu() {
     }
 }
 
+
 function deactiveModalMenu() {
     var menu = document.querySelector( '.js-menu' );
     if ( menu.querySelector( '.js-menu-list' ) ) {
@@ -284,7 +285,11 @@ function activeModalMenu() {
     updateMenu();
     window.addEventListener( "optimizedResize", function () {
         updateMenu();
-    } );
+    });
+
+    window.addEventListener("resize", function() {
+        updateMenu();
+    });
 
     document.body.addEventListener( 'modalWasClosed', function () {
         document.body.classList.remove( 'is-modal-open' );
