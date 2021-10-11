@@ -1,0 +1,80 @@
+.select {
+  position: relative;
+  display: block;
+  &__head {
+    @extend %font-size18-22;
+    color: #272733;
+    font-weight: normal;
+    padding: 12px 10px;
+    text-align: left;
+    cursor: pointer;
+    &::after {
+      width: 10px;
+      height: 6px;
+      background: url('../../images/dest/arrow.svg') center / cover no-repeat;
+      position: absolute;
+      right: 20px;
+      bottom: 50%;
+      transform: translateY(50%);
+      content: '';
+      display: block;
+      padding: 5px;
+      transition: .2s ease-in;
+    }
+    &.select__head--open {
+      background: rgba(61, 64, 80, 0.85);
+      border-radius: 3px 3px 0px 0px;
+      color: $basic-white;
+      border: none;
+    }
+    &--open::after {
+      background: url('../../images/dest/arrow-white.svg') center / cover no-repeat;
+      transform: translateY(50%) rotate(180deg);
+    }
+  }
+  &__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(39, 39, 51, 1);
+    border: 1px solid $basic-grey;
+    box-sizing: border-box;
+    border-radius: 3px;
+    max-height: 216px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    @extend %font-size18-22;
+    font-weight: normal;
+    color: $basic-white;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+    @include mobile {
+      outline: 1px solid $basic-grey;
+    }
+  }
+  &__item {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: left;
+    &:hover {
+      color: $basic-blue;
+    }
+  }
+}
+
+.select__list::-webkit-scrollbar {
+  width: 7px;
+  background: $basic-grey;
+  border-radius: 3px;
+}
+
+.select__list::-webkit-scrollbar-thumb {
+  background-color: $basic-blue;
+  border-radius: 3px;
+}
