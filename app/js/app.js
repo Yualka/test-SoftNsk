@@ -194,16 +194,6 @@ $(document).ready(function(){
     }
 });
 
-/*Обновить страницу при изменении размера*/
-/*$(window).bind('resize', function(e)
-{
-    if (window.RT) clearTimeout(window.RT);
-    window.RT = setTimeout(function()
-    {
-        this.location.reload(false);
-    }, 100);
-});*/
-
 var modalCloseEvent;
 if ( typeof (Event) === 'function' ) {
     modalCloseEvent = new CustomEvent( 'modalWasClosed' );
