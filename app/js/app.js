@@ -242,6 +242,7 @@ function updateMenu() {
     }
 }
 
+
 function deactiveModalMenu() {
     var menu = document.querySelector( '.js-menu' );
     if ( menu.querySelector( '.js-menu-list' ) ) {

@@ -7,6 +7,10 @@
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 15px;
   }
+  &__control-text {
+    width: 85%;
+    text-align: left;
+  }
   &__input {
     -webkit-appearance: none;
     height: 6px;
@@ -35,7 +39,7 @@
 }
 
 .slider .slider__control span {
-  @include tablet-only  {
+  @include mobile  {
     font-size: 15px;
     line-height: 18px;
   }
