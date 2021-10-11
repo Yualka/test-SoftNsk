@@ -1,0 +1,60 @@
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background:$basic-white;
+    color: $basic-dark ;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+section,
+aside,
+main,
+header,
+footer {
+    display: block;
+}
+
+button {
+    font-weight: 500;
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+textarea {
+    overflow: auto;
+}
+
+a {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: $basic-blue;
+        outline: none;
+        text-decoration: none;
+    }
+}
+figure {
+    margin: 0;
+    img {
+        max-width: 100%;
+    }
+}
+
+ul {
+    list-style-type: none;
+}

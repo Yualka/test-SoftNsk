@@ -1,0 +1,18 @@
+.page {
+  &__container {
+    max-width: 1200px;
+    padding: 0 15px;
+    @extend %margin-auto;
+    &:not(:first-child) {
+      margin-top: 80px;
+
+      @include touch {
+        margin-top: 60px;
+      }
+
+      @include mobile {
+        margin-top: 40px;
+      }
+    }
+  }
+}
